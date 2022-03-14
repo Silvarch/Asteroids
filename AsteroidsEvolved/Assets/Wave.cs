@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class Wave
 {
-    public Transform enemy;
+    public Transform Asteroid;
     public int Count;
     public float SpawnRate;
 }
