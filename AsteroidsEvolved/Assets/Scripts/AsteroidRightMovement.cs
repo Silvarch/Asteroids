@@ -24,7 +24,7 @@ public class AsteroidRightMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D StruckObject)
     {
-        if (StruckObject.tag == "Asteroid" || StruckObject.tag == "Boundry")
+        if (StruckObject.tag == "Asteroid" || StruckObject.tag == "Bounds")
         {
             CollisionCounter++;
         }
