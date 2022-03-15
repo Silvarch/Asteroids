@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* Written by LL */
 public class WaveSpawner : MonoBehaviour
 {
     public enum SpawnState {SPAWNING, IDLE, COUNTING };
@@ -9,10 +9,10 @@ public class WaveSpawner : MonoBehaviour
     public Wave[] Waves;
     private int NextWave = 0;
 
-    public float TimeBetweenWaves = 5f;
+    public float TimeBetweenWaves = 5;
     public float WaveCountdown;
 
-    private float SearchFrequency = 1f;
+    private float SearchFrequency = 1;
 
     private SpawnState State = SpawnState.COUNTING;
 
@@ -29,6 +29,7 @@ public class WaveSpawner : MonoBehaviour
             {
                 //Begin New Wave
                 Debug.Log("Wave Completed");
+                
             }
             else
             {
@@ -41,6 +42,7 @@ public class WaveSpawner : MonoBehaviour
             if(State != SpawnState.SPAWNING)
             {
                 StartCoroutine(SpawnWave(Waves[NextWave]));
+                NextWave++;
             }
         }
         else
@@ -65,15 +67,16 @@ public class WaveSpawner : MonoBehaviour
         return true;
     }
 
-    IEnumerator SpawnWave(Wave _Wave)
+    IEnumerator SpawnWave(Wave Wave)
     {
-        Debug.Log("Spawning Wave" + _Wave.Count);
+        Debug.Log("Spawning Wave" + Wave.Count);
         State = SpawnState.SPAWNING;
 
-        for (int i = 0; i < _Wave.Count; i++)
+        for (int i = 0; i < Wave.Count; i++)
         {
-            SpawnAsteroid(_Wave.Asteroid);
-            yield return new WaitForSeconds(1f/ _Wave.SpawnRate);
+            SpawnAsteroid(Wave.Asteroid);
+            
+            yield return new WaitForSeconds(1f/ Wave.SpawnRate);
         }
 
         State = SpawnState.IDLE;
@@ -82,10 +85,11 @@ public class WaveSpawner : MonoBehaviour
         yield break;
     }
 
-    void SpawnAsteroid(Transform Asteroid)
+    void SpawnAsteroid(GameObject Asteroid)
     {
         Debug.Log("Spawning Asteroid");
         Instantiate(Asteroid, transform.position, transform.rotation);
         
     }
+    /* Written by LL */
 }
