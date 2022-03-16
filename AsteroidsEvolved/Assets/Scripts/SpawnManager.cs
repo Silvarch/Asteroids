@@ -40,15 +40,15 @@ public class SpawnManager : MonoBehaviour
             NextSpawnTime = Time.time + SecondsBetweenSpawns;
             Vector2 SpawnPosition = new Vector2(Random.Range(-ScreenHalfSizeWorldUnits.x, ScreenHalfSizeWorldUnits.x), ScreenHalfSizeWorldUnits.y);
 
-            if (SpawnDecider <= 25)
+            if (SpawnDecider == 1)
             {
                 Instantiate(AsteroidMovementPrefab, SpawnPosition, Quaternion.identity);
             }
-            else if (SpawnDecider <= 50 && SpawnDecider > 25)
+            else if (SpawnDecider == 2)
             {
                 Instantiate(AsteroidRightMovementPrefab, SpawnPosition, Quaternion.identity);
             }
-            else if (SpawnDecider <= 75 && SpawnDecider > 50)
+            else if (SpawnDecider == 3)
             {
                 Instantiate(AsteroidLeftMovementPrefab, SpawnPosition, Quaternion.identity);
             }
@@ -61,7 +61,7 @@ public class SpawnManager : MonoBehaviour
 
     int Randomize()
     {
-        int RandomInteger = Random.Range(1, 100);
+        int RandomInteger = Random.Range(1, 4);
         return RandomInteger;
     }
 
