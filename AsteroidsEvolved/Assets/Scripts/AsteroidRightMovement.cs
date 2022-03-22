@@ -28,6 +28,15 @@ public class AsteroidRightMovement : MonoBehaviour
         {
             CollisionCounter++;
         }
+        else if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds")
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
     /* Written by LL */
 }
