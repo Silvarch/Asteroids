@@ -31,5 +31,17 @@ public class AsteroidRandomMovement : MonoBehaviour
         int RandomNumber = Random.Range(0, 100);
         return RandomNumber;
     }
+    void OnTriggerEnter2D(Collider2D StruckObject)
+    {
+        if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds")
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
     /* Written by LL */
 }
