@@ -686,6 +686,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445186543466630386, guid: 5fb244b3f250f6144a55b9dc2dc41848, type: 3}
+      propertyPath: m_fontStyle
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 445186543466630386, guid: 5fb244b3f250f6144a55b9dc2dc41848, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 445186543466630387, guid: 5fb244b3f250f6144a55b9dc2dc41848, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 445186543466630387, guid: 5fb244b3f250f6144a55b9dc2dc41848, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1250
+      objectReference: {fileID: 0}
+    - target: {fileID: 445186543466630396, guid: 5fb244b3f250f6144a55b9dc2dc41848, type: 3}
+      propertyPath: m_Name
+      value: HeaderText (TMP)
+      objectReference: {fileID: 0}
     - target: {fileID: 664633688307221309, guid: 5fb244b3f250f6144a55b9dc2dc41848, type: 3}
       propertyPath: m_Name
       value: PauseController
