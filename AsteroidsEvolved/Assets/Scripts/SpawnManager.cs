@@ -8,7 +8,10 @@ public class SpawnManager : MonoBehaviour
     public GameObject AsteroidMovementPrefab;
     public GameObject AsteroidRightMovementPrefab;
     public GameObject AsteroidLeftMovementPrefab;
-    public GameObject AsteroidRandomMovementPrefab;
+    public GameObject HugeAsteroidMovementPrefab;
+    public GameObject HugeAsteroidRightMovementPrefab;
+    public GameObject HugeAsteroidLeftMovementPrefab;
+
 
     private double SecondsBetweenSpawns = 3;
     double NextSpawnTime;
@@ -34,12 +37,12 @@ public class SpawnManager : MonoBehaviour
 
     void Spawn()
     {
-        for (int i = 10; i < Time.time; i = i + 10)
+        for (int i = 10; i < NextSpawnTime; i += 10)
         {
             int SpawnDecider = Randomize();
             NextSpawnTime = Time.time + SecondsBetweenSpawns;
             Vector2 SpawnPosition = new Vector2(Random.Range(-ScreenHalfSizeWorldUnits.x, ScreenHalfSizeWorldUnits.x), ScreenHalfSizeWorldUnits.y);
-
+        
             if (SpawnDecider == 1)
             {
                 Instantiate(AsteroidMovementPrefab, SpawnPosition, Quaternion.identity);
@@ -54,9 +57,11 @@ public class SpawnManager : MonoBehaviour
             }
             else
             {
-                Instantiate(AsteroidRandomMovementPrefab, SpawnPosition, Quaternion.identity);
+                Instantiate(HugeAsteroidMovementPrefab, SpawnPosition, Quaternion.identity);
             }
         }
+            
+        
     }
 
     int Randomize()

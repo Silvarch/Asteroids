@@ -5,7 +5,7 @@ using UnityEngine;
 public class AsteroidLeftMovement : MonoBehaviour
 {
     /* Written by LL */
-    float speed = 2;
+    float speed = 1;
     int CollisionCounter = 0;
 
     void Update()
