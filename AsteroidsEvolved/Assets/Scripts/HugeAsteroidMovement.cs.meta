@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: 9a550b0871959e5438a03e43223985ec
+guid: 6d3912ebd74c63d429cbd82ea8b56b64
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - AsteroidMovementPrefab: {fileID: 1251446829500886552, guid: 00a17dfc20643bb4a91b5bc68e1c1969, type: 3}
-  - AsteroidRightMovementPrefab: {fileID: 3198552707959450962, guid: 7788ff188375b1240a5b77503a58523a, type: 3}
-  - AsteroidLeftMovementPrefab: {fileID: 7398720320454378844, guid: aa8164f46ce70ef4d8910fa7819a39e8, type: 3}
+  - AsteroidMovementPrefab: {instanceID: 0}
+  - AsteroidRightMovementPrefab: {instanceID: 0}
+  - AsteroidLeftMovementPrefab: {instanceID: 0}
   - HugeAsteroidMovementPrefab: {fileID: 4564356457620322173, guid: 5791754488a13fa4ca58d95155c89a1e, type: 3}
   - HugeAsteroidRightMovementPrefab: {instanceID: 0}
   - HugeAsteroidLeftMovementPrefab: {instanceID: 0}

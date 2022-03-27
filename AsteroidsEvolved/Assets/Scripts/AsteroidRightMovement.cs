@@ -5,7 +5,7 @@ using UnityEngine;
 public class AsteroidRightMovement : MonoBehaviour
 {
     /* Written by LL */
-    float speed = 2;
+    float speed = 1;
     int CollisionCounter = 0;
 
     void Update()
@@ -31,6 +31,7 @@ public class AsteroidRightMovement : MonoBehaviour
         else if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds")
         {
             Destroy(gameObject);
+            
         }
     }
 

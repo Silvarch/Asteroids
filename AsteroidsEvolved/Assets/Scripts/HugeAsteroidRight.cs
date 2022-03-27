@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AsteroidLeftMovement : MonoBehaviour
+public class HugeAsteroidRight : SpawnManager
 {
     /* Written by LL */
     float speed = 1;
@@ -10,7 +10,7 @@ public class AsteroidLeftMovement : MonoBehaviour
 
     void Update()
     {
-        if (CollisionCounter % 2 == 1)
+        if (CollisionCounter % 2 == 0)
         {
             transform.Translate(Vector3.down * speed * Time.deltaTime);
             transform.Translate(Vector3.right * speed * Time.deltaTime);
@@ -31,6 +31,8 @@ public class AsteroidLeftMovement : MonoBehaviour
         else if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds")
         {
             Destroy(gameObject);
+            Instantiate(AsteroidLeftMovementPrefab, transform.position, transform.rotation); //whatever position and rotation the huge asteroid prefab is in will be where the two smaller ones spawn
+            Instantiate(AsteroidRightMovementPrefab, transform.position, transform.rotation);
         }
     }
 
