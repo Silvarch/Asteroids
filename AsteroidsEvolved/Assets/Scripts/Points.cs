@@ -28,7 +28,7 @@ public class Points : MonoBehaviour
 
     }
 
-    public void GetScore() {
+    public double GetScore() {
         return currentPoints;
     }
 
