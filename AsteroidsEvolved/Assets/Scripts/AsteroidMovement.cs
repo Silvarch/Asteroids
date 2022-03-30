@@ -11,7 +11,7 @@ public class AsteroidMovement : MonoBehaviour
 
     void Update()
     {
-            transform.Translate(Vector3.down * speed * Time.deltaTime);
+            transform.Translate(Vector2.down * speed * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D StruckObject)
