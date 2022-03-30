@@ -8,10 +8,14 @@ public class SpawnManager : MonoBehaviour
     public GameObject AsteroidMovementPrefab;
     public GameObject AsteroidRightMovementPrefab;
     public GameObject AsteroidLeftMovementPrefab;
-    public GameObject AsteroidRandomMovementPrefab;
+    public GameObject HugeAsteroidMovementPrefab;
+    public GameObject HugeAsteroidRightMovementPrefab;
+    public GameObject HugeAsteroidLeftMovementPrefab;
 
-    private double SecondsBetweenSpawns = 3;
+
+    private double SecondsBetweenSpawns = 5;
     double NextSpawnTime;
+    
 
     Vector2 ScreenHalfSizeWorldUnits;
     // Start is called before the first frame update
@@ -23,6 +27,7 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (Time.time > NextSpawnTime)
         {
             
@@ -34,34 +39,53 @@ public class SpawnManager : MonoBehaviour
 
     void Spawn()
     {
-        for (int i = 10; i < Time.time; i = i + 10)
-        {
+
+        
             int SpawnDecider = Randomize();
             NextSpawnTime = Time.time + SecondsBetweenSpawns;
             Vector2 SpawnPosition = new Vector2(Random.Range(-ScreenHalfSizeWorldUnits.x, ScreenHalfSizeWorldUnits.x), ScreenHalfSizeWorldUnits.y);
 
-            if (SpawnDecider == 1)
-            {
+           
+        //switch statement set up so that large asteroid objects are half as likely to spawn as regular sized ones
+        switch (SpawnDecider)
+        {
+            case 1:
+            case 2:
                 Instantiate(AsteroidMovementPrefab, SpawnPosition, Quaternion.identity);
-            }
-            else if (SpawnDecider == 2)
-            {
+                break;
+            case 3:
+            case 4:
                 Instantiate(AsteroidRightMovementPrefab, SpawnPosition, Quaternion.identity);
-            }
-            else if (SpawnDecider == 3)
-            {
+                break;
+            case 5:
+            case 6:
                 Instantiate(AsteroidLeftMovementPrefab, SpawnPosition, Quaternion.identity);
-            }
-            else
+                break;
+            case 7:
+                Instantiate(HugeAsteroidMovementPrefab, SpawnPosition, Quaternion.identity);
+                break;
+            case 8:
+                Instantiate(HugeAsteroidLeftMovementPrefab, SpawnPosition, Quaternion.identity);
+                break;
+            case 9:
+                Instantiate(HugeAsteroidRightMovementPrefab, SpawnPosition, Quaternion.identity);
+                break;
+        }
+
+        if (SecondsBetweenSpawns > 2)
+        {
+
+            for (int i = 10; i < Time.time; i += 10)
             {
-                Instantiate(AsteroidRandomMovementPrefab, SpawnPosition, Quaternion.identity);
+                SecondsBetweenSpawns -= .1;
             }
         }
+                
     }
 
     int Randomize()
     {
-        int RandomInteger = Random.Range(1, 4);
+        int RandomInteger = Random.Range(1, 10);
         return RandomInteger;
     }
 
