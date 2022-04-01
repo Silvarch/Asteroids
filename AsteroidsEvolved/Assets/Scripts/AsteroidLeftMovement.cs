@@ -5,20 +5,20 @@ using UnityEngine;
 public class AsteroidLeftMovement : MonoBehaviour
 {
     /* Written by LL */
-    float speed = 2;
+    float speed = 1;
     int CollisionCounter = 0;
 
     void Update()
     {
         if (CollisionCounter % 2 == 1)
         {
-            transform.Translate(Vector3.down * speed * Time.deltaTime);
-            transform.Translate(Vector3.right * speed * Time.deltaTime);
+            transform.Translate(Vector2.down * speed * Time.deltaTime);
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
         }
         else
         {
-            transform.Translate(Vector3.down * speed * Time.deltaTime);
-            transform.Translate(Vector3.left * speed * Time.deltaTime);
+            transform.Translate(Vector2.down * speed * Time.deltaTime);
+            transform.Translate(Vector2.left * speed * Time.deltaTime);
         }
     }
 
