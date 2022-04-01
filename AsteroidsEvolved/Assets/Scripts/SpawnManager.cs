@@ -72,7 +72,7 @@ public class SpawnManager : MonoBehaviour
                 break;
         }
 
-        if (SecondsBetweenSpawns > 2)
+        if (SecondsBetweenSpawns > 1.5)
         {
 
             for (int i = 10; i < Time.time; i += 10)
