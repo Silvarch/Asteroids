@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Written by JP
 public class Player_Controller_Script : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -55,3 +57,4 @@ public class Player_Controller_Script : MonoBehaviour
 
     }
 }
+//Written by JP

@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AsteroidRightMovement : MonoBehaviour
+public class AsteroidRightMovement : SpawnManager
 {
     /* Written by LL */
-    float speed = 1;
+    
     int CollisionCounter = 0;
 
     void Update()
@@ -28,7 +28,7 @@ public class AsteroidRightMovement : MonoBehaviour
         {
             CollisionCounter++;
         }
-        else if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds")
+        else if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds" && StruckObject.tag != "Trail")
         {
             Destroy(gameObject);
             
