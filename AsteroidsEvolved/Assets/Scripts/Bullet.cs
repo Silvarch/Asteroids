@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Writenby KS
+//Written by JP
 public class Bullet : MonoBehaviour
 {
     public float speed;
@@ -21,7 +21,9 @@ public class Bullet : MonoBehaviour
     {
         Destroy(gameObject);
     }
+//Written by JP
 
+    //Writenby KS
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag != "Trail") //trails will still be on screen after being hit to allow for natural deletion of particles. rule set in place so that bullets do not bounce off trail rigidbodies
@@ -34,5 +36,6 @@ public class Bullet : MonoBehaviour
             
         }
     }
+    //Written by KS
 }
-//Written by KS
+
