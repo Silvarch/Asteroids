@@ -5,7 +5,7 @@ using UnityEngine;
 public class HugeAsteroidLeft : SpawnManager
 {
     /* Written by LL */
-    float speed = 1;
+    
     int CollisionCounter = 0;
 
     void Update()
@@ -28,7 +28,7 @@ public class HugeAsteroidLeft : SpawnManager
         {
             CollisionCounter++;
         }
-        else if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds")
+        else if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds" && StruckObject.tag != "Trail")
         {
             Destroy(gameObject);
             Instantiate(AsteroidLeftMovementPrefab, transform.position, transform.rotation); //whatever position and rotation the huge asteroid prefab is in will be where the two smaller ones spawn

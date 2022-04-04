@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Written by KS
 public class PauseGame : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -54,3 +55,4 @@ public class PauseGame : MonoBehaviour
     }
 
 }
+//Written by KS
