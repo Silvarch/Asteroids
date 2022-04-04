@@ -17,13 +17,13 @@ public class AsteroidRandomMovement : MonoBehaviour
 
         if (RandomDirection % 2 == 0)
         {
-            transform.Translate(Vector3.down * speed * Time.deltaTime);
-            transform.Translate(Vector3.right * speed * Time.deltaTime);
+            transform.Translate(Vector2.down * speed * Time.deltaTime);
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
         }
         else
         {
-            transform.Translate(Vector3.down * speed * Time.deltaTime);
-            transform.Translate(Vector3.left * speed * Time.deltaTime);
+            transform.Translate(Vector2.down * speed * Time.deltaTime);
+            transform.Translate(Vector2.left * speed * Time.deltaTime);
         }
     }
     int Randomizer()

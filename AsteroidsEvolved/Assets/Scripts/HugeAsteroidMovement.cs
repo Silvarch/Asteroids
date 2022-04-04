@@ -17,8 +17,9 @@ public class HugeAsteroidMovement : SpawnManager
 
     void Update()
     {
-        transform.Translate(Vector3.down * speed * Time.deltaTime);
-        
+
+        transform.Translate(Vector2.down * speed * Time.deltaTime);
+
     }
 
     //on collision huge asteroid object is destroyed and two smallwer ones spawn in its place
