@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AsteroidMovement : MonoBehaviour
+public class AsteroidMovement : SpawnManager
 {
     /* Written by LL */
-    float speed = 1;
-
 
 
     void Update()
@@ -16,7 +14,7 @@ public class AsteroidMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D StruckObject)
     {
-        if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds")
+        if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds" && StruckObject.tag != "Trail")
         {
             Destroy(gameObject);
         }
