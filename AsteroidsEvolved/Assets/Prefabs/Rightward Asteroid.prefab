@@ -97,6 +97,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ceb106c81740a445b97229132550367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AsteroidMovementPrefab: {fileID: 0}
+  AsteroidRightMovementPrefab: {fileID: 0}
+  AsteroidLeftMovementPrefab: {fileID: 0}
+  HugeAsteroidMovementPrefab: {fileID: 0}
+  HugeAsteroidRightMovementPrefab: {fileID: 0}
+  HugeAsteroidLeftMovementPrefab: {fileID: 0}
+  ParticleSystemPrefab: {fileID: 0}
+  speed: 2
+  AsteroidType: 
 --- !u!58 &-1021563865815848439
 CircleCollider2D:
   m_ObjectHideFlags: 0
