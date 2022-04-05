@@ -38,12 +38,12 @@ public class ParticlePath : SpawnManager
         switch (Direction)
         {
             case "Down":
-                Collider.radius = 0.9f;               
+                Collider.radius = 0.92f;               
                 transform.Translate(Vector3.down * speed * Time.deltaTime);
                 break;
 
             case "Right":
-                Collider.radius = 0.9f;
+                Collider.radius = .92f;
 
                 if (CollisionCounter % 2 == 1)
                 {
@@ -59,7 +59,7 @@ public class ParticlePath : SpawnManager
                 break;
 
             case "Left":
-                Collider.radius = 0.9f;
+                Collider.radius = 0.92f;
                 if (CollisionCounter % 2 == 1)
                 {
                     transform.Translate(Vector3.down * speed * Time.deltaTime);
@@ -73,13 +73,13 @@ public class ParticlePath : SpawnManager
                 break;
 
             case "HugeDown":
-                Collider.radius = 1.5f;
+                Collider.radius = 1.52f;
                 IsHuge = true;
                 transform.Translate(Vector3.down * speed * Time.deltaTime);
                 break;
 
             case "HugeRight":
-                Collider.radius = 1.5f;
+                Collider.radius = 1.52f;
                 IsHuge = true;
                 if (CollisionCounter % 2 == 1)
                 {
@@ -94,7 +94,7 @@ public class ParticlePath : SpawnManager
                 break;
 
             case "HugeLeft":
-                Collider.radius = 1.5f;
+                Collider.radius = 1.52f;
                 IsHuge = true;
                 if (CollisionCounter % 2 == 1)
                 {
@@ -120,7 +120,7 @@ public class ParticlePath : SpawnManager
 
 
         }
-        else if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds")
+        else if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds" && StruckObject.tag != "Trail")
         {
             var emission = Particles.emission;
             emission.rateOverTime = 0;
@@ -131,6 +131,11 @@ public class ParticlePath : SpawnManager
                 Instantiate(ParticleSystemPrefab, transform.position, transform.rotation);
             }
 
+        }
+
+    else if (StruckObject.tag == "Delete") //if ibject collides with deletion box off camera it is then destroyed
+        {
+            Destroy(gameObject);
         }
     }
 
