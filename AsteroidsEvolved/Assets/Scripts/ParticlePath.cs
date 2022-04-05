@@ -120,7 +120,7 @@ public class ParticlePath : SpawnManager
 
 
         }
-        else if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds")
+        else if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds" && StruckObject.tag != "Trail")
         {
             var emission = Particles.emission;
             emission.rateOverTime = 0;
@@ -131,6 +131,11 @@ public class ParticlePath : SpawnManager
                 Instantiate(ParticleSystemPrefab, transform.position, transform.rotation);
             }
 
+        }
+
+    else if (StruckObject.tag == "Delete") //if ibject collides with deletion box off camera it is then destroyed
+        {
+            Destroy(gameObject);
         }
     }
 
