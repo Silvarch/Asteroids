@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Written by JP
 public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
@@ -23,3 +24,4 @@ public class Weapon : MonoBehaviour
         shootSound.Play();
     }
 }
+//Written by JP
