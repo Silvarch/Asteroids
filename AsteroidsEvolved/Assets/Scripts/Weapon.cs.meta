@@ -6,7 +6,7 @@ MonoImporter:
   defaultReferences:
   - firePoint: {instanceID: 0}
   - bulletTemplate: {instanceID: 0}
-  - shootSound: {fileID: 6172420355252682154, guid: af0b258698e64bb4da9d7858bc2ffbe2, type: 3}
+  - shootSound: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

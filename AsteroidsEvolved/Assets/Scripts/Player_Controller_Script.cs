@@ -12,6 +12,7 @@ public class Player_Controller_Script : MonoBehaviour
 
     private Rigidbody2D rd;
     private Vector2 moveVelocity;
+    private Vector3 spawnPoint;
     private float rotationVelocity;
     private float radians;
     
@@ -19,8 +20,9 @@ public class Player_Controller_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spawnPoint = GameObject.Find("SpawnPoint").transform.position;
         rd = GetComponent<Rigidbody2D>();
-
+        this.transform.position = spawnPoint;
     }
 
     // Update is called once per frame
@@ -36,6 +38,16 @@ public class Player_Controller_Script : MonoBehaviour
         }
 
         rotationVelocity = rotationInput * rotationSpeed * -1;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Asteroid") 
+        {
+            //Debug.Log("Ran into an asteroid");
+            moveVelocity = new Vector2(0, 0);
+            rd.transform.position = spawnPoint;
+        }
     }
 
     private void FixedUpdate()
