@@ -6,9 +6,8 @@ TagManager:
   tags:
   - Asteroid
   - Bounds
-
-  - Planet
-
+  - Trail
+  - Delete
   layers:
   - Default
   - TransparentFX

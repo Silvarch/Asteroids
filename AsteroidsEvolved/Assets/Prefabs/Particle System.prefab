@@ -603,7 +603,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 20
+    maxNumParticles: 10000
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -4825,8 +4825,8 @@ MonoBehaviour:
   HugeAsteroidMovementPrefab: {fileID: 0}
   HugeAsteroidRightMovementPrefab: {fileID: 0}
   HugeAsteroidLeftMovementPrefab: {fileID: 0}
-  ParticleSystemPrefab: {fileID: 0}
-  HugeParticleSystemPrefab: {fileID: 0}
+  ParticleSystemPrefab: {fileID: 8193728640151251935}
+  HugeParticleSystemPrefab: {fileID: 719717477238607357, guid: 3ea9e49958587884596ea0e7cce58727, type: 3}
   speed: 2
   CollisionCounter: 0
 --- !u!58 &4339253354325876911
