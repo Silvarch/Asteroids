@@ -10,6 +10,7 @@ public class LivesHandler : MonoBehaviour
     private GameObject[] lifeIndicators;
     public int currentLives = 3; // testing purposes only
     public Color lifeDisabledColor = new Color(17.65f, 17.65f, 17.65f);
+    public GameObject GameOverGui;
 
     void Start()
     {
@@ -25,8 +26,7 @@ public class LivesHandler : MonoBehaviour
             GameOver();
         }
     }
-
-
+    
     public void updateLifeIndicator(int lives) {
         for(int i = 0; i < 3; i++) {
             if (i < currentLives)
@@ -37,10 +37,23 @@ public class LivesHandler : MonoBehaviour
                 lifeIndicators[i].GetComponent<Image>().color = lifeDisabledColor;
             }
         }
+
+        if (!IsLivesLeft())
+        {
+            GameOver();
+        }
+
     }
 
-    public void GameOver() { 
-        
+    public bool IsLivesLeft() {
+        if(currentLives > 0){
+            return true;
+        }
+        return false;
+    }
+
+    public void GameOver() {
+        GameOverGui.SetActive(true);
     }
     
 }
