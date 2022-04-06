@@ -24,11 +24,11 @@ public class AsteroidLeftMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D StruckObject)
     {
-        if (StruckObject.tag == "Asteroid" || StruckObject.tag == "Bounds")
+        if (StruckObject.tag == "Asteroid" || StruckObject.tag == "Bounds" || StruckObject.tag == "HugeAsteroid")
         {
             CollisionCounter++;
         }
-        else if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds")
+        else if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds" && StruckObject.tag != "HugeAsteroid")
         {
             Destroy(gameObject);
         }

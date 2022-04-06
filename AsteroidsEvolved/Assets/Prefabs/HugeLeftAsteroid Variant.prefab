@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HugeLeftAsteroid Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4564356457620322173, guid: 5791754488a13fa4ca58d95155c89a1e, type: 3}
+      propertyPath: m_TagString
+      value: HugeAsteroid
+      objectReference: {fileID: 0}
     - target: {fileID: 5944633480624944850, guid: 5791754488a13fa4ca58d95155c89a1e, type: 3}
       propertyPath: m_RootOrder
       value: 0
