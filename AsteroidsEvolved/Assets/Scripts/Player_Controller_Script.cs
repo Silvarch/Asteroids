@@ -9,6 +9,7 @@ public class Player_Controller_Script : MonoBehaviour
     // Start is called before the first frame update
     public float moveSpeed;
     public float rotationSpeed;
+    public LivesHandler playerLife;
 
     private Rigidbody2D rd;
     private Vector2 moveVelocity;
@@ -21,7 +22,7 @@ public class Player_Controller_Script : MonoBehaviour
     void Start()
     {
         spawnPoint = GameObject.Find("SpawnPoint").transform.position;
-        rd = GetComponent<Rigidbody2D>();
+        rd = this.GetComponent<Rigidbody2D>();
         this.transform.position = spawnPoint;
     }
 
@@ -47,6 +48,7 @@ public class Player_Controller_Script : MonoBehaviour
             //Debug.Log("Ran into an asteroid");
             moveVelocity = new Vector2(0, 0);
             rd.transform.position = spawnPoint;
+            playerLife.decreaseLife();
         }
     }
 

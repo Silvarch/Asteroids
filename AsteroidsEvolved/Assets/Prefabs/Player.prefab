@@ -44,6 +44,8 @@ GameObject:
   - component: {fileID: 7985764583127603377}
   - component: {fileID: 7985764583127605071}
   - component: {fileID: 7985764583127605068}
+  - component: {fileID: 6443211937285508183}
+  - component: {fileID: 1586362275}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -179,3 +181,32 @@ MonoBehaviour:
   firePoint: {fileID: 7985764581322593270}
   bulletTemplate: {fileID: 5724172002619257135, guid: 794956434ade9e14fb3bd70286ae619b, type: 3}
   shootSound: {fileID: 0}
+--- !u!114 &6443211937285508183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7985764583127603378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02522578061358f41ad529b4712327bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreTextDisplay: {fileID: 0}
+--- !u!58 &1586362275
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7985764583127603378}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.15
