@@ -23,7 +23,7 @@ public class HugeAsteroidLeft : SpawnManager
 
     void OnTriggerEnter2D(Collider2D StruckObject)
     {
-        if (StruckObject.tag == "Asteroid" || StruckObject.tag == "Bounds")
+        if (StruckObject.tag == "Asteroid" || StruckObject.tag == "HugeAsteroid" || StruckObject.tag == "Bounds")
         {
             CollisionCounter++;
         }
