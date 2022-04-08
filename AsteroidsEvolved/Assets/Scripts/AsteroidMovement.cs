@@ -5,6 +5,8 @@ using UnityEngine;
 public class AsteroidMovement : SpawnManager
 {
     /* Written by LL */
+    
+
 
 
     void Update()
@@ -14,7 +16,7 @@ public class AsteroidMovement : SpawnManager
 
     void OnTriggerEnter2D(Collider2D StruckObject)
     {
-        if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds" && StruckObject.tag != "Trail")
+        if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds" && StruckObject.tag != "HugeAsteroid" && StruckObject.tag != "Trail")
         {
             Destroy(gameObject);
         }
