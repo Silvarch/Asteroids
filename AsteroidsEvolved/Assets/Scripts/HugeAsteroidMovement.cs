@@ -16,7 +16,7 @@ public class HugeAsteroidMovement : SpawnManager
     //on collision huge asteroid object is destroyed and two smallwer ones spawn in its place
     void OnTriggerEnter2D(Collider2D StruckObject)
     {
-        if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds" && StruckObject.tag != "Planet" && StruckObject.tag != "Trail" && StruckObject.tag != "Trail")
+        if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds" && StruckObject.tag != "Planet" && StruckObject.tag != "Trail")
         {
             Destroy(gameObject);
             Instantiate(AsteroidLeftMovementPrefab, transform.position, transform.rotation); //whatever position and rotation the huge asteroid prefab is in will be where the two smaller ones spawn
