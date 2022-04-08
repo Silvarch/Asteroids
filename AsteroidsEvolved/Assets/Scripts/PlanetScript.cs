@@ -4,52 +4,45 @@ using UnityEngine;
 
 public class PlanetScript : MonoBehaviour
 {
-    /*
-    public int currentHealth = 0;
-    public int maxHealth = 100;
 
-    public HealthBar healthbar;
+    public int maxHealth = 100;
+    public int currentHealth;
+    public healthBar healthbar;
 
     void start()
     {
         currentHealth = maxHealth;
+        healthbar.SetMaxHealth(maxHealth);
     }
-    */
 
-    /*
-    void Update()
+    void update()
     {
-        
-        void OnCollisionEnter2D(Collision2D collsion)
-        {
-            if (collsion.gameObject.tag == "Asteroid")
+        void OnCollisionEnter2D(Collision2D collide)
             {
-                DamagePlanet(10);
+                if (collide.gameObject.tag == "Asteroid")
+                {
+                    Destroy(collide.gameObject);
+                    DamagePlanet(10);
+                }
+                else if (collide.gameObject.tag == "HugeAsteroid")
+                {
+                    Destroy(collide.gameObject);
+                    DamagePlanet(20);
+                }
             }
-            else if (collsion.gameObject.tag == "HugeAsteroid")
-            {
-                DamagePlanet(20);
-            }
-        }
-        
-     
     }
-    */
+    
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Asteroid" || collision.gameObject.tag == "HugeAsteroid")
-        {
-            Destroy(collision.gameObject);
-        }
-    }
-
-    /*
     void DamagePlanet(int damage)
     {
-        currentHealth -= damage;
+        currentHealth = currentHealth - damage;
 
-        healthBar.setHealth(currentHealth);
+        healthbar.SetHealth(currentHealth);
     }
-    */
+
+
+
+    
+    
+    
 }
