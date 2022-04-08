@@ -24,7 +24,7 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ScreenHalfSizeWorldUnits = new Vector2(Camera.main.aspect * (Camera.main.orthographicSize - 1), Camera.main.orthographicSize);
+        ScreenHalfSizeWorldUnits = new Vector2(Camera.main.aspect * (Camera.main.orthographicSize - 1.5), Camera.main.orthographicSize);
     }
 
     // Update is called once per frame
