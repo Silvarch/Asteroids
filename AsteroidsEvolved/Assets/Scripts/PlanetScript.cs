@@ -15,19 +15,24 @@ public class PlanetScript : MonoBehaviour
         healthbar.SetMaxHealth(maxHealth);
     }
 
-    void OnTriggerEnter2D(Collider2D collide)
+    void update()
     {
-        if (collide.gameObject.tag == "Asteroid")
-        {
-            Destroy(collide.gameObject);
-            DamagePlanet(10);
-        }
-        else if (collide.gameObject.tag == "HugeAsteroid")
-        {
-            Destroy(collide.gameObject);
-            DamagePlanet(20);
-        }
+        void OnCollisionEnter2D(Collision2D collide)
+            {
+                if (collide.gameObject.tag == "Asteroid")
+                {
+                    Destroy(collide.gameObject);
+                    DamagePlanet(10);
+                }
+                else if (collide.gameObject.tag == "HugeAsteroid")
+                {
+                    Destroy(collide.gameObject);
+                    DamagePlanet(20);
+                }
+            }
     }
+    
+
     void DamagePlanet(int damage)
     {
         currentHealth = currentHealth - damage;

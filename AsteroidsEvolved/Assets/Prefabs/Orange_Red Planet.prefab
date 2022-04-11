@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4887985066197674895}
   - component: {fileID: 4887985066197674892}
+  - component: {fileID: 4887985066197674893}
   - component: {fileID: 4493741989464062274}
   - component: {fileID: 8178709735761647418}
-  - component: {fileID: 8968124378575598039}
   m_Layer: 0
   m_Name: Orange_Red Planet
   m_TagString: Planet
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4887985066197674890}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -7, z: 0}
-  m_LocalScale: {x: 36.70793, y: 26.5, z: 26.5}
+  m_LocalPosition: {x: 0, y: -7, z: 0}
+  m_LocalScale: {x: 26.5, y: 26.5, z: 26.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -85,6 +85,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &4887985066197674893
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4887985066197674890}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.24
 --- !u!114 &4493741989464062274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,8 +113,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac61ac40f4bc0a54bb6bd011a6697ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 0
   maxHealth: 100
-  currentHealth: 100
   healthbar: {fileID: 6611609743740290322, guid: 1d09c5b5aca9ee44190a950b59a433f4, type: 3}
 --- !u!50 &8178709735761647418
 Rigidbody2D:
@@ -121,19 +137,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!70 &8968124378575598039
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4887985066197674890}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.01}
-  m_Size: {x: 0.48, y: 0.48}
-  m_Direction: 1
