@@ -8,6 +8,8 @@ TagManager:
   - Bounds
   - Trail
   - Delete
+  - Planet
+  - HugeAsteroid
   layers:
   - Default
   - TransparentFX
@@ -44,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Planet
+    uniqueID: 376021205
     locked: 0
