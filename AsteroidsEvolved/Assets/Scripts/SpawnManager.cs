@@ -31,7 +31,7 @@ public class SpawnManager : MonoBehaviour
     void Update()
     {
         
-        if (Time.time > NextSpawnTime)
+        if (Time.timeSinceLevelLoad > NextSpawnTime)
         {
             
             Spawn();
@@ -45,7 +45,7 @@ public class SpawnManager : MonoBehaviour
 
         
             int SpawnDecider = Randomize();
-            NextSpawnTime = Time.time + SecondsBetweenSpawns;
+            NextSpawnTime = Time.timeSinceLevelLoad + SecondsBetweenSpawns;
             Vector2 SpawnPosition = new Vector2(Random.Range(-ScreenHalfSizeWorldUnits.x, ScreenHalfSizeWorldUnits.x), ScreenHalfSizeWorldUnits.y);
 
            
@@ -90,7 +90,7 @@ public class SpawnManager : MonoBehaviour
         if (SecondsBetweenSpawns > 1.5)
         {
 
-            for (int i = 10; i < Time.time; i += 10)
+            for (int i = 10; i < Time.timeSinceLevelLoad; i += 10)
             {
                 SecondsBetweenSpawns -= .1;
             }

@@ -54,6 +54,8 @@ public class LivesHandler : MonoBehaviour
 
     public void GameOver() {
         GameOverGui.SetActive(true);
+        GameOverGui.GetComponent<PauseGame>().IsPaused(true);
+        GameOverGui.GetComponent<GameOver>().setScore();
     }
     
 }
