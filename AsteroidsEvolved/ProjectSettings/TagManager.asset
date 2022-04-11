@@ -8,8 +8,6 @@ TagManager:
   - Bounds
   - Trail
   - Delete
-  - LifeIndicator
-  - Planet
   layers:
   - Default
   - TransparentFX
@@ -44,12 +42,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: background
-    uniqueID: 4176121995
-    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: planet
-    uniqueID: 4222185427
     locked: 0
