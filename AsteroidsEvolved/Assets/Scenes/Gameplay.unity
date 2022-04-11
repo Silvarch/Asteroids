@@ -266,6 +266,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 152570226343739781, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
+      propertyPath: playerLife
+      value: 
+      objectReference: {fileID: 7839970097051858145}
     - target: {fileID: 152570226343741048, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
       propertyPath: shootSound
       value: 
@@ -336,3 +340,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
+--- !u!114 &7839970097051858145 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2399989168606782152, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
+  m_PrefabInstance: {fileID: 7839970097051858144}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7063d89802e8b884ea47d982f79639f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

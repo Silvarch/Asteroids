@@ -24,14 +24,14 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ScreenHalfSizeWorldUnits = new Vector2(Camera.main.aspect * (Camera.main.orthographicSize - 1.5), Camera.main.orthographicSize);
+        ScreenHalfSizeWorldUnits = new Vector2(Camera.main.aspect * Camera.main.orthographicSize -1, Camera.main.orthographicSize);
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        if (Time.time > NextSpawnTime)
+        if (Time.timeSinceLevelLoad > NextSpawnTime)
         {
             
             Spawn();
@@ -45,7 +45,7 @@ public class SpawnManager : MonoBehaviour
 
         
             int SpawnDecider = Randomize();
-            NextSpawnTime = Time.time + SecondsBetweenSpawns;
+            NextSpawnTime = Time.timeSinceLevelLoad + SecondsBetweenSpawns;
             Vector2 SpawnPosition = new Vector2(Random.Range(-ScreenHalfSizeWorldUnits.x, ScreenHalfSizeWorldUnits.x), ScreenHalfSizeWorldUnits.y);
 
            
@@ -90,7 +90,7 @@ public class SpawnManager : MonoBehaviour
         if (SecondsBetweenSpawns > 1.5)
         {
 
-            for (int i = 10; i < Time.time; i += 10)
+            for (int i = 10; i < Time.timeSinceLevelLoad; i += 10)
             {
                 SecondsBetweenSpawns -= .1;
             }
