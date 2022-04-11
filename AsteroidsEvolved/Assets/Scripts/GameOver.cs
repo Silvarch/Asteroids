@@ -7,6 +7,8 @@ public class GameOver : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    private static bool gameOverCheck = false;
+
     public TextMeshProUGUI scoreTxt;
     public TextMeshProUGUI bonusMultiplierScoreTxt;
     public TextMeshProUGUI totalScoreTxt;
@@ -23,7 +25,16 @@ public class GameOver : MonoBehaviour
     {
         scoreTxt.text = points.GetScore().ToString();
         totalScoreTxt.text = points.GetScore().ToString();
+        gameOverCheck = true;
     }
 
+    public static bool IsGameOver() {
+        return gameOverCheck;
+    }
+
+    private void OnDestroy()
+    {
+        gameOverCheck = false;
+    }
 
 }
