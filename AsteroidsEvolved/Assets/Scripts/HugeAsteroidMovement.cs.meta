@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 6d3912ebd74c63d429cbd82ea8b56b64
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - AsteroidMovementPrefab: {instanceID: 0}
+  - AsteroidRightMovementPrefab: {instanceID: 0}
+  - AsteroidLeftMovementPrefab: {instanceID: 0}
+  - HugeAsteroidMovementPrefab: {fileID: 4564356457620322173, guid: 5791754488a13fa4ca58d95155c89a1e, type: 3}
+  - HugeAsteroidRightMovementPrefab: {instanceID: 0}
+  - HugeAsteroidLeftMovementPrefab: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
