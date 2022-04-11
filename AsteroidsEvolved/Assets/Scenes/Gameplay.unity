@@ -241,8 +241,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1064121627}
   - component: {fileID: 1064121628}
+  - component: {fileID: 1064121629}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Galaxy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -256,8 +257,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064121626}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.033, y: 0.24, z: 0}
-  m_LocalScale: {x: 0.39076647, y: 0.45605, z: 0.456}
+  m_LocalPosition: {x: 1.0584, y: 0.26965, z: 0}
+  m_LocalScale: {x: 0.4966173, y: 0.57958484, z: 0.5795304}
   m_Children: []
   m_Father: {fileID: 151108306}
   m_RootOrder: 0
@@ -299,8 +300,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 376021205
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5fc46bf4d38974a41ae1183beaf52150, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -313,6 +314,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1064121629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064121626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e44c45cf23830a44c9eeb67fa0ff6f2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1072921715 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7839970097153199200, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
@@ -416,7 +429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5415595878787571107, guid: 853a3a7d1d7385b4eaf049666a598f29, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5415595878787571107, guid: 853a3a7d1d7385b4eaf049666a598f29, type: 3}
       propertyPath: m_AnchorMax.x
