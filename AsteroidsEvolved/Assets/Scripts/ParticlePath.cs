@@ -124,6 +124,7 @@ public class ParticlePath : SpawnManager
         {
             var emission = Particles.emission;
             emission.rateOverTime = 0;
+            Collider.radius = 0;
 
             /*if (IsHuge == true) //currently a trail is not added to astroids created by a larger one ADD THIS
             {
