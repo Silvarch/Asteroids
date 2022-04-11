@@ -9,17 +9,14 @@ public class PauseGame : MonoBehaviour
     // Start is called before the first frame update
 
     [SerializeField] private GameObject canvasContent;
-    private static bool isPaused = false;
+    [SerializeField] private static bool isPaused = false;
 
-    private void Update()
+    void Start()
     {
-        if (!GameOver.IsGameOver() && Input.GetKeyDown(KeyCode.Escape)) {
-            isPaused = !isPaused;
-            updateState();
-        }
+        isPaused = false;
     }
 
-    public void SetPaused(bool isPaused) {
+    public void IsPaused(bool isPaused) {
         PauseGame.isPaused = isPaused;
         updateState();
     }
@@ -45,7 +42,6 @@ public class PauseGame : MonoBehaviour
     private void OnDestroy()
     {
         Time.timeScale = 1;
-        isPaused = false;
     }
 
 }

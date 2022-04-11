@@ -123,20 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-
---- !u!114 &1347797081 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7839970096087302980, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
-  m_PrefabInstance: {fileID: 7839970097051858144}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02522578061358f41ad529b4712327bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1001 &1358344470
-
 --- !u!224 &267256973 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7839970095542516436, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
@@ -258,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca610eb8377fbe64e854c0e4b055ad69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-
+--- !u!1001 &1042535873
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -486,18 +472,6 @@ PrefabInstance:
       propertyPath: shootSound
       value: 
       objectReference: {fileID: 2077903846}
-    - target: {fileID: 312579553396312930, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 312579554268418687, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
-      propertyPath: points
-      value: 
-      objectReference: {fileID: 1347797081}
-    - target: {fileID: 312579554555545804, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 6957728912839987616, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.38
@@ -513,10 +487,6 @@ PrefabInstance:
     - target: {fileID: 6957728913928168419, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 7701354986841331580, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetPaused
       objectReference: {fileID: 0}
     - target: {fileID: 7839970097153199200, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
       propertyPath: m_RootOrder
