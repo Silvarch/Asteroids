@@ -85,6 +85,3 @@ MonoBehaviour:
   HugeAsteroidMovementPrefab: {fileID: 0}
   HugeAsteroidRightMovementPrefab: {fileID: 0}
   HugeAsteroidLeftMovementPrefab: {fileID: 0}
-  ParticleSystemPrefab: {fileID: 0}
-  HugeParticleSystemPrefab: {fileID: 0}
-  speed: 2

@@ -16,6 +16,16 @@ public class PauseGame : MonoBehaviour
         isPaused = false;
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            isPaused = !isPaused;
+            updateState();
+        }
+    }
+
     public void IsPaused(bool isPaused) {
         PauseGame.isPaused = isPaused;
         updateState();
