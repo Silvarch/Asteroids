@@ -30,7 +30,7 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (collision.tag == "Asteroid")
+        if (collision.tag == "Asteroid" || collision.tag == "HugeAsteroid")
         {
             player.GetComponent<Points>().UpdateScore();
             
