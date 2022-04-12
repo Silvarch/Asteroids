@@ -178,5 +178,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenuCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 7308788040019120258, guid: a4fef8d38ffb0934a9baa5ceb442dc1a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4fef8d38ffb0934a9baa5ceb442dc1a, type: 3}
