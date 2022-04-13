@@ -24,7 +24,8 @@ public class GameOver : MonoBehaviour
     public void setScore() //temporary used until multiplier score is also added
     {
         scoreTxt.text = points.GetScore().ToString();
-        totalScoreTxt.text = points.GetScore().ToString();
+        bonusMultiplierScoreTxt.text = points.CalculateMultiplier().ToString();
+        totalScoreTxt.text = points.CalculateTotalScore(points.GetScore(), points.CalculateMultiplier()).ToString();
         gameOverCheck = true;
     }
 
