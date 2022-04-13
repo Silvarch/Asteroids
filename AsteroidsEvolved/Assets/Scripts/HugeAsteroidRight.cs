@@ -5,7 +5,6 @@ using UnityEngine;
 public class HugeAsteroidRight : SpawnManager
 {
     /* Written by LL */
-    
     int CollisionCounter = 0;
 
     void Update()
@@ -24,16 +23,22 @@ public class HugeAsteroidRight : SpawnManager
 
     void OnTriggerEnter2D(Collider2D StruckObject)
     {
-        if (StruckObject.tag == "Asteroid" || StruckObject.tag == "Bounds")
+        if (StruckObject.tag == "Asteroid" || StruckObject.tag == "HugeAsteroid" || StruckObject.tag == "Bounds")
         {
             CollisionCounter++;
         }
-        else if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds" && StruckObject.tag != "Trail")
+        else if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds" && StruckObject.tag != "Planet" && StruckObject.tag != "Trail" && StruckObject.tag != "HugeAsteroid")
         {
             Destroy(gameObject);
             Instantiate(AsteroidLeftMovementPrefab, transform.position, transform.rotation); //whatever position and rotation the huge asteroid prefab is in will be where the two smaller ones spawn
             Instantiate(AsteroidRightMovementPrefab, transform.position, transform.rotation);
         }
+
+        else if (StruckObject.tag == "Planet")
+        {
+            Destroy(gameObject);
+        }
+
     }
 
     private void OnBecameInvisible()

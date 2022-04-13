@@ -5,7 +5,7 @@ using UnityEngine;
 public class AsteroidRightMovement : SpawnManager
 {
     /* Written by LL */
-    
+   
     int CollisionCounter = 0;
 
     void Update()
@@ -24,11 +24,11 @@ public class AsteroidRightMovement : SpawnManager
 
     void OnTriggerEnter2D(Collider2D StruckObject)
     {
-        if (StruckObject.tag == "Asteroid" || StruckObject.tag == "Bounds")
+        if (StruckObject.tag == "Asteroid" || StruckObject.tag == "Bounds" || StruckObject.tag == "HugeAsteroid")
         {
             CollisionCounter++;
         }
-        else if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds" && StruckObject.tag != "Trail")
+        else if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds" && StruckObject.tag != "HugeAsteroid" && StruckObject.tag != "Trail")
         {
             Destroy(gameObject);
             

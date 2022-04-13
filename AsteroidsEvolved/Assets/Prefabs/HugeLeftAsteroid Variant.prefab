@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HugeLeftAsteroid Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4564356457620322173, guid: 5791754488a13fa4ca58d95155c89a1e, type: 3}
+      propertyPath: m_TagString
+      value: HugeAsteroid
+      objectReference: {fileID: 0}
     - target: {fileID: 5944633480624944850, guid: 5791754488a13fa4ca58d95155c89a1e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -55,14 +59,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6634990416206330213, guid: 5791754488a13fa4ca58d95155c89a1e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6634990416206330213, guid: 5791754488a13fa4ca58d95155c89a1e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2353627917861687661, guid: 5791754488a13fa4ca58d95155c89a1e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5791754488a13fa4ca58d95155c89a1e, type: 3}
@@ -89,3 +85,6 @@ MonoBehaviour:
   HugeAsteroidMovementPrefab: {fileID: 0}
   HugeAsteroidRightMovementPrefab: {fileID: 0}
   HugeAsteroidLeftMovementPrefab: {fileID: 0}
+  ParticleSystemPrefab: {fileID: 0}
+  HugeParticleSystemPrefab: {fileID: 0}
+  speed: 2

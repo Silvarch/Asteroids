@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1251446829500886552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.24, y: 11.11, z: 1000}
+  m_LocalPosition: {x: -6.2222, y: 2.3948, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -104,6 +104,7 @@ MonoBehaviour:
   HugeAsteroidRightMovementPrefab: {fileID: 0}
   HugeAsteroidLeftMovementPrefab: {fileID: 0}
   ParticleSystemPrefab: {fileID: 0}
+  HugeParticleSystemPrefab: {fileID: 0}
   speed: 2
 --- !u!58 &319740242916556324
 CircleCollider2D:

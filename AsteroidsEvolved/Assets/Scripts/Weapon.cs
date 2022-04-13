@@ -11,9 +11,9 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && PauseGame.IsPaused() == false)
         {
-            shootProjectile();
+             shootProjectile();
         }
     }
 

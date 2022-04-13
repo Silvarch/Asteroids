@@ -104,6 +104,7 @@ MonoBehaviour:
   HugeAsteroidRightMovementPrefab: {fileID: 0}
   HugeAsteroidLeftMovementPrefab: {fileID: 0}
   ParticleSystemPrefab: {fileID: 0}
+  HugeParticleSystemPrefab: {fileID: 0}
   speed: 2
 --- !u!58 &-1793231291490013886
 CircleCollider2D:
