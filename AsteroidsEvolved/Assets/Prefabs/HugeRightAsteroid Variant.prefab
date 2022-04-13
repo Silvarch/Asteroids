@@ -11,17 +11,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: HugeRightAsteroid Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 685434431823561230, guid: d76945e4d95cfe342ba9b1b28bd95980, type: 3}
+      propertyPath: m_TagString
+      value: HugeAsteroid
+      objectReference: {fileID: 0}
     - target: {fileID: 7254006384215802785, guid: d76945e4d95cfe342ba9b1b28bd95980, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7254006384215802785, guid: d76945e4d95cfe342ba9b1b28bd95980, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.38
+      value: -11.71
       objectReference: {fileID: 0}
     - target: {fileID: 7254006384215802785, guid: d76945e4d95cfe342ba9b1b28bd95980, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.94
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 7254006384215802785, guid: d76945e4d95cfe342ba9b1b28bd95980, type: 3}
       propertyPath: m_LocalPosition.z
@@ -55,14 +59,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7692364050802084886, guid: d76945e4d95cfe342ba9b1b28bd95980, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7692364050802084886, guid: d76945e4d95cfe342ba9b1b28bd95980, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5253078265394466179, guid: d76945e4d95cfe342ba9b1b28bd95980, type: 3}
     - {fileID: 9169345824009440425, guid: d76945e4d95cfe342ba9b1b28bd95980, type: 3}
@@ -90,3 +86,6 @@ MonoBehaviour:
   HugeAsteroidMovementPrefab: {fileID: 0}
   HugeAsteroidRightMovementPrefab: {fileID: 0}
   HugeAsteroidLeftMovementPrefab: {fileID: 0}
+  ParticleSystemPrefab: {fileID: 0}
+  HugeParticleSystemPrefab: {fileID: 0}
+  speed: 2

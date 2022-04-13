@@ -38,12 +38,12 @@ public class ParticlePath : SpawnManager
         switch (Direction)
         {
             case "Down":
-                Collider.radius = 0.92f;               
+                Collider.radius = 1.60f;               
                 transform.Translate(Vector3.down * speed * Time.deltaTime);
                 break;
 
             case "Right":
-                Collider.radius = .92f;
+                Collider.radius = 1.60f;
 
                 if (CollisionCounter % 2 == 1)
                 {
@@ -59,7 +59,7 @@ public class ParticlePath : SpawnManager
                 break;
 
             case "Left":
-                Collider.radius = 0.92f;
+                Collider.radius = 1.60f;
                 if (CollisionCounter % 2 == 1)
                 {
                     transform.Translate(Vector3.down * speed * Time.deltaTime);
@@ -73,13 +73,13 @@ public class ParticlePath : SpawnManager
                 break;
 
             case "HugeDown":
-                Collider.radius = 1.52f;
+                Collider.radius = 1.6f;
                 IsHuge = true;
                 transform.Translate(Vector3.down * speed * Time.deltaTime);
                 break;
 
             case "HugeRight":
-                Collider.radius = 1.52f;
+                Collider.radius = 1.6f;
                 IsHuge = true;
                 if (CollisionCounter % 2 == 1)
                 {
@@ -94,7 +94,7 @@ public class ParticlePath : SpawnManager
                 break;
 
             case "HugeLeft":
-                Collider.radius = 1.52f;
+                Collider.radius = 1.6f;
                 IsHuge = true;
                 if (CollisionCounter % 2 == 1)
                 {
@@ -113,23 +113,24 @@ public class ParticlePath : SpawnManager
     //Ensures that when an asteroid strikes another asteroid or the invisible bounds that the particle effect will follow it
     void OnTriggerEnter2D(Collider2D StruckObject)
     {
-        if (StruckObject.tag == "Asteroid" || StruckObject.tag == "Bounds")
+        if (StruckObject.tag == "Asteroid" || StruckObject.tag == "HugeAsteroid" || StruckObject.tag == "Bounds")
         {
             CollisionCounter++;
 
 
 
         }
-        else if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds" && StruckObject.tag != "Trail")
+        else if (StruckObject.tag != "Asteroid" && StruckObject.tag != "Bounds" && StruckObject.tag != "Trail" && StruckObject.tag != "HugeAsteroid")
         {
             var emission = Particles.emission;
             emission.rateOverTime = 0;
+            Collider.radius = 0;
 
-            if (IsHuge == true) //currently a trail is not added to astroids created by a larger one ADD THIS
+            /*if (IsHuge == true) //currently a trail is not added to astroids created by a larger one ADD THIS
             {
                 Instantiate(ParticleSystemPrefab, transform.position, transform.rotation);
                 Instantiate(ParticleSystemPrefab, transform.position, transform.rotation);
-            }
+            }*/
 
         }
 

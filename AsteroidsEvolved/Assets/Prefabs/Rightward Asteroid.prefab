@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3198552707959450962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.78547436, y: -0.14750645, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,11 +71,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1740531305
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300012, guid: 1bd6c74c058d5f143a391104c445e845, type: 3}
-  m_Color: {r: 0.39607847, g: 0.25490198, b: 0.25490198, a: 1}
+  m_Sprite: {fileID: 21300006, guid: 5b4fe00be9cbb254c8eb45016d9a8e3b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -104,8 +104,8 @@ MonoBehaviour:
   HugeAsteroidRightMovementPrefab: {fileID: 0}
   HugeAsteroidLeftMovementPrefab: {fileID: 0}
   ParticleSystemPrefab: {fileID: 0}
+  HugeParticleSystemPrefab: {fileID: 0}
   speed: 2
-  AsteroidType: 
 --- !u!58 &-1021563865815848439
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -121,7 +121,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.9
+  m_Radius: 0.08
 --- !u!50 &7571924490569054155
 Rigidbody2D:
   serializedVersion: 4

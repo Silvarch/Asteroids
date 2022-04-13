@@ -10,6 +10,7 @@ public class Points : MonoBehaviour
     private double currentPoints = 0;
     private double AstroidPointValue = 10;
     [SerializeField] private GameObject scoreTextDisplay;
+    [SerializeField] private PlanetScript planetHealth;
     private TextMeshProUGUI visualScore;
 
     // Start is called before the first frame update
@@ -18,10 +19,12 @@ public class Points : MonoBehaviour
         visualScore = scoreTextDisplay.GetComponent<TextMeshProUGUI>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    public double CalculateMultiplier() { 
+        return (planetHealth.getPlantHealth() / 100.0) + 1.0;
+    }
 
+    public double CalculateTotalScore(double score, double multiplier) {
+        return score * multiplier;
     }
 
     public void UpdateScore()
