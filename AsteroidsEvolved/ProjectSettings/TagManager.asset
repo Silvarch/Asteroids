@@ -8,8 +8,9 @@ TagManager:
   - Bounds
   - Trail
   - Delete
-  - LifeIndicator
   - Planet
+  - HugeAsteroid
+  - LifeIndicator
   layers:
   - Default
   - TransparentFX
@@ -45,11 +46,11 @@ TagManager:
   - 
   m_SortingLayers:
   - name: background
-    uniqueID: 4176121995
+    uniqueID: 802688495
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: planet
-    uniqueID: 4222185427
+    uniqueID: 2554435991
     locked: 0

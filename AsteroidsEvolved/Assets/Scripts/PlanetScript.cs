@@ -36,7 +36,9 @@ public class PlanetScript : MonoBehaviour
     }
 
 
-
+    public int getPlantHealth() {
+        return currentHealth;
+    }
     
     
     
