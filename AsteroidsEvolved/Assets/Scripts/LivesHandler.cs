@@ -10,7 +10,7 @@ public class LivesHandler : MonoBehaviour
     private GameObject[] lifeIndicators;
     public int currentLives = 3; // testing purposes only
     public Color lifeDisabledColor = new Color(17.65f, 17.65f, 17.65f);
-    public GameObject GameOverGui;
+    public GameObject GameOverEvent;
 
     void Start()
     {
@@ -53,9 +53,7 @@ public class LivesHandler : MonoBehaviour
     }
 
     public void GameOver() {
-        GameOverGui.SetActive(true);
-        GameOverGui.GetComponent<PauseGame>().SetPaused(true);
-        GameOverGui.GetComponent<GameOver>().setScore();
+        GameOverEvent.SetActive(true);
     }
     
 }
