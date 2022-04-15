@@ -8,6 +8,7 @@ public class PlanetScript : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public healthBar healthbar;
+    public GameObject gameOverEvent;
 
     void start()
     {
@@ -33,6 +34,10 @@ public class PlanetScript : MonoBehaviour
         currentHealth = currentHealth - damage;
 
         healthbar.SetHealth(currentHealth);
+
+        if (currentHealth <= 0) {
+            gameOverEvent.SetActive(true);
+        }
     }
 
 
