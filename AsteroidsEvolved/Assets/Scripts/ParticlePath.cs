@@ -38,12 +38,12 @@ public class ParticlePath : SpawnManager
         switch (Direction)
         {
             case "Down":
-                Collider.radius = 1.90f;               
+                Collider.radius = 1.60f;               
                 transform.Translate(Vector3.down * speed * Time.deltaTime);
                 break;
 
             case "Right":
-                Collider.radius = 1.90f;
+                Collider.radius = 1.60f;
 
                 if (CollisionCounter % 2 == 1)
                 {
@@ -59,7 +59,7 @@ public class ParticlePath : SpawnManager
                 break;
 
             case "Left":
-                Collider.radius = 1.90f;
+                Collider.radius = 1.60f;
                 if (CollisionCounter % 2 == 1)
                 {
                     transform.Translate(Vector3.down * speed * Time.deltaTime);
@@ -73,13 +73,13 @@ public class ParticlePath : SpawnManager
                 break;
 
             case "HugeDown":
-                Collider.radius = 5.1f;
+                Collider.radius = 1.6f;
                 IsHuge = true;
                 transform.Translate(Vector3.down * speed * Time.deltaTime);
                 break;
 
             case "HugeRight":
-                Collider.radius = 5.1f;
+                Collider.radius = 1.6f;
                 IsHuge = true;
                 if (CollisionCounter % 2 == 1)
                 {
@@ -94,7 +94,7 @@ public class ParticlePath : SpawnManager
                 break;
 
             case "HugeLeft":
-                Collider.radius = 5.1f;
+                Collider.radius = 1.6f;
                 IsHuge = true;
                 if (CollisionCounter % 2 == 1)
                 {
