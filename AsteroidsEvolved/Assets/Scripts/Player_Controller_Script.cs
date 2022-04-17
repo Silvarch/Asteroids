@@ -1,3 +1,12 @@
+/*******************************************************************************************************************************************************************
+Program:Asteroids Evolved
+Authors: Derrick Grant, Justin Perkins, Kyle Shaw, Logan Larocque
+Date: April 17,2022
+Class: Player_Controller_Script
+Purpose: Controls all aspects of player interaction
+Notes: 
+********************************************************************************************************************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

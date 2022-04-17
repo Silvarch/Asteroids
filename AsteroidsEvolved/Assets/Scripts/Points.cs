@@ -1,3 +1,12 @@
+/*******************************************************************************************************************************************************************
+Program:Asteroids Evolved
+Authors: Derrick Grant, Justin Perkins, Kyle Shaw, Logan Larocque
+Date: April 17,2022
+Class: Points
+Purpose: creates visual indicators and backend recording of points scored
+Notes: Player can see their current points at all times while playing without the modifier of planet health whcih is displayed at game over
+********************************************************************************************************************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;

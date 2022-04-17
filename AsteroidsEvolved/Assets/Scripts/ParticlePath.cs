@@ -1,18 +1,18 @@
+/*******************************************************************************************************************************************************************
+Program:Asteroids Evolved
+Authors: Derrick Grant, Justin Perkins, Kyle Shaw, Logan Larocque
+Date: April 17,2022
+Class: ParticlePath
+Purpose: to create partilce systems that trail behind each asteroid gameObject
+Notes: A particle path clsss was used in conjuntion with the built in unity particle system. The purpose is to create a trailing effect on all asteroids.
+When gameObjects containing this script are instantiated, a particle system is spawned on the same location with the same directional movement as that gameObject.
+The colliders are also identical to each respective asteroid. When an asteroid is hit, so is the ParticleSystem's collider. When struck the object remains on its
+tragectory, however it will stop spawning particles. This allows particles to naturally despawn instead of abruptly disapearing all at once
+********************************************************************************************************************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-/*NOTES: A particle path clsss was used in conjuntion with the built in unity particle system. The purpose is to create a trailing effect on all asteroids.
-When gameObjects containing this script are instantiated, a particle system is spawned on the same location with the same directional movement as that gameObject.
-The colliders are also identical to each respective asteroid. When an asteroid is hit, so is the ParticleSystem's collider. When struck the object remains on its
-tragectory, however it will stop spawning particles. This allows particles to naturally despawn instead of abruptly disapearing all at once.
-
-TODO:
-find a way to change the scale of ParticleSystem using C# so that two prefabs do not need to be instantiated to accomodate large asteroids
-Add trails to asteroids created aftrer a large one is destroyed
-find a more suitible prefab for the trail
-*/
-
 //Written by LL
 public class ParticlePath : SpawnManager
 {
@@ -30,7 +30,7 @@ public class ParticlePath : SpawnManager
         Collider = GetComponent<CircleCollider2D>();
         Particles = GetComponent<ParticleSystem>();
     }
-    // Update is called once per frame, 
+    // Update is called once per frame, the path that is spawned will directly correlate with the asteroid Object that spawns at the same time. this allows for trrail movement to be hard coded and still follow an identical path to any asteroid
     void Update()
     {
         
@@ -38,12 +38,12 @@ public class ParticlePath : SpawnManager
         switch (Direction)
         {
             case "Down":
-                Collider.radius = 1.60f;               
+                Collider.radius = 1.7f;               
                 transform.Translate(Vector3.down * speed * Time.deltaTime);
                 break;
 
             case "Right":
-                Collider.radius = 1.60f;
+                Collider.radius = 1.7f;
 
                 if (CollisionCounter % 2 == 1)
                 {
@@ -59,7 +59,7 @@ public class ParticlePath : SpawnManager
                 break;
 
             case "Left":
-                Collider.radius = 1.60f;
+                Collider.radius = 1.7f;
                 if (CollisionCounter % 2 == 1)
                 {
                     transform.Translate(Vector3.down * speed * Time.deltaTime);
