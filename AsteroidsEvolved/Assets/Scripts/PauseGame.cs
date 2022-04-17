@@ -1,3 +1,12 @@
+/*******************************************************************************************************************************************************************
+Program:Asteroids Evolved
+Authors: Derrick Grant, Justin Perkins, Kyle Shaw, Logan Larocque
+Date: April 17,2022
+Class: PauseGame
+Purpose: Allows the player to pause the game at will
+Notes: options are presented to the player to either resume or quit the game. quitting will take you back to the main menu
+********************************************************************************************************************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

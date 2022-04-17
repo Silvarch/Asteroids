@@ -1,3 +1,12 @@
+/*******************************************************************************************************************************************************************
+Program:Asteroids Evolved
+Authors: Derrick Grant, Justin Perkins, Kyle Shaw, Logan Larocque
+Date: April 17,2022
+Class: Bullet
+Purpose: Controls the movment and collision rules for a bullet
+Notes: there is also code set in place to update the player score through bullet collisions
+********************************************************************************************************************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

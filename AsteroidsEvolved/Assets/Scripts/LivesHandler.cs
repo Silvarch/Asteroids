@@ -1,8 +1,18 @@
+/*******************************************************************************************************************************************************************
+Program:Asteroids Evolved
+Authors: Derrick Grant, Justin Perkins, Kyle Shaw, Logan Larocque
+Date: April 17,2022
+Class: LivesHandler
+Purpose: handles all aspects of the player lives system
+Notes: Player starts with three lives. lives are removed uppon collision with asteroids. A vidual indicator is displayed on the screen which is also updated with the current amount of lives
+********************************************************************************************************************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Written by KS
 public class LivesHandler : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -57,3 +67,4 @@ public class LivesHandler : MonoBehaviour
     }
     
 }
+// Written by KS

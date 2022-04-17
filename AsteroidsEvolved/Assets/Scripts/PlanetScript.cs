@@ -1,7 +1,17 @@
+/*******************************************************************************************************************************************************************
+Program:Asteroids Evolved
+Authors: Derrick Grant, Justin Perkins, Kyle Shaw, Logan Larocque
+Date: April 17,2022
+Class: PlanetScript
+Purpose: Controls all interation with the Planet
+Notes:Objects colliding with the planet are destroid and damage is assigned based on the object. Upon taking damage, the healthbar class is called to update the visual indicator.
+********************************************************************************************************************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Written by DG
 public class PlanetScript : MonoBehaviour
 {
 
@@ -48,3 +58,4 @@ public class PlanetScript : MonoBehaviour
     
     
 }
+//Written by DG

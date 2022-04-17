@@ -1,3 +1,12 @@
+/*******************************************************************************************************************************************************************
+Program:Asteroids Evolved
+Authors: Derrick Grant, Justin Perkins, Kyle Shaw, Logan Larocque
+Date: April 17,2022
+Class: Weapon
+Purpose: framework that allows for the firing of projectiles
+Notes: If fire button is pressed an projectile is created and sent in the direction the player is facing.
+********************************************************************************************************************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -1,3 +1,13 @@
+/*******************************************************************************************************************************************************************
+Program:Asteroids Evolved
+Authors: Derrick Grant, Justin Perkins, Kyle Shaw, Logan Larocque
+Date: April 17,2022
+Class: SpawnManager
+Purpose: Controls the spawning of Asteroid gameObjects
+Notes: Asteroids spawn every 5 seconds at the start of the game. after 10 seconds this speed is incrementally increased up til an upper linket of about 0.9 seconds. 
+       The asteroid types spawn at random, with Huge asteroids being half as likely to spawn as regular sized ones.
+********************************************************************************************************************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,7 +37,7 @@ public class SpawnManager : MonoBehaviour
         ScreenHalfSizeWorldUnits = new Vector2(Camera.main.aspect * (Camera.main.orthographicSize -1), Camera.main.orthographicSize);
     }
 
-    // Update is called once per frame
+    // Update is called once per frame. if statement is used to limit processing power used. spawn function is onmly called when a span is possible
     void Update()
     {
         
@@ -40,13 +50,14 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
+    // Called when a spawn is possible, a random number is generated between 1 and 9. based on the number a specific type of Asteroid is instantiated(created) and spawns at a random location at the top of the screen
     void Spawn()
     {
 
         
-            int SpawnDecider = Randomize();
-            NextSpawnTime = Time.timeSinceLevelLoad + SecondsBetweenSpawns;
-            Vector2 SpawnPosition = new Vector2(Random.Range(-ScreenHalfSizeWorldUnits.x, ScreenHalfSizeWorldUnits.x), ScreenHalfSizeWorldUnits.y);
+            int SpawnDecider = Randomize(); // Random number determining asteroid type spawned
+            NextSpawnTime = Time.timeSinceLevelLoad + SecondsBetweenSpawns; //determines the next time this method will be called
+            Vector2 SpawnPosition = new Vector2(Random.Range(-ScreenHalfSizeWorldUnits.x, ScreenHalfSizeWorldUnits.x), ScreenHalfSizeWorldUnits.y); // Random spawn loaction
 
            
         //switch statement set up so that large asteroid objects are half as likely to spawn as regular sized ones
@@ -87,6 +98,7 @@ public class SpawnManager : MonoBehaviour
                 break;
         }
 
+        //DAdjusts the time between spawns by subtracting .1 second per for loop iteration. this makes for exponential change in the spawn time to an upper limit of about 0.9 seconds between spawns
         if (SecondsBetweenSpawns > 1.5)
         {
 
@@ -98,6 +110,7 @@ public class SpawnManager : MonoBehaviour
                 
     }
 
+    //randomize method creates a random number
     int Randomize()
     {
         int RandomInteger = Random.Range(1, 10);
