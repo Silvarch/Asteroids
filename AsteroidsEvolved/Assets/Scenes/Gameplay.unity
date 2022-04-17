@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &684538180 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5949767224335039668, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
-  m_PrefabInstance: {fileID: 7839970097051858144}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac61ac40f4bc0a54bb6bd011a6697ef4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1042535873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -211,11 +200,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 872a5f2148a297443a6337dd6ebc1c58, type: 3}
---- !u!1 &1147679224 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 312579554268418682, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
-  m_PrefabInstance: {fileID: 7839970097051858144}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7839970097051858144
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -235,46 +219,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2399989168606782152, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
-      propertyPath: GameOverEvent
-      value: 
-      objectReference: {fileID: 1147679224}
-    - target: {fileID: 3393664382916570746, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3393664382916570746, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
-      propertyPath: m_FlipY
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3393664382916570746, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3393664382916570746, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1740531305
-      objectReference: {fileID: 0}
-    - target: {fileID: 5949767224335039668, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
-      propertyPath: gameOverEvent
-      value: 
-      objectReference: {fileID: 1147679224}
-    - target: {fileID: 7701354986841331580, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetPaused
-      objectReference: {fileID: 0}
-    - target: {fileID: 7839970095751857819, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -59.36914
-      objectReference: {fileID: 0}
-    - target: {fileID: 7839970095751857819, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -26.798828
-      objectReference: {fileID: 0}
-    - target: {fileID: 7839970096087302980, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
-      propertyPath: planetHealth
-      value: 
-      objectReference: {fileID: 684538180}
     - target: {fileID: 7839970097153199200, guid: a5c249bd0d7f91c4d873ac6d808d75b7, type: 3}
       propertyPath: m_RootOrder
       value: 0

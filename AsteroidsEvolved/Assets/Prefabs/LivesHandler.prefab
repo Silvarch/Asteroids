@@ -201,8 +201,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7063d89802e8b884ea47d982f79639f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifeIndicators:
+  - {fileID: 5585398316465094642}
+  - {fileID: 5585398317844259369}
+  - {fileID: 5585398316559148576}
   currentLives: 3
   lifeDisabledColor: {r: 0.1764706, g: 0.1764706, b: 0.1764706, a: 1}
+  GameOverEvent: {fileID: 0}
 --- !u!1 &5585398317844259369
 GameObject:
   m_ObjectHideFlags: 0

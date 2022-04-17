@@ -17,14 +17,13 @@ public class LivesHandler : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    private GameObject[] lifeIndicators;
-    public int currentLives = 3; // testing purposes only
+    public GameObject[] lifeIndicators;
+    public int currentLives = 3;
     public Color lifeDisabledColor = new Color(17.65f, 17.65f, 17.65f);
     public GameObject GameOverEvent;
 
     void Start()
     {
-        lifeIndicators = GameObject.FindGameObjectsWithTag("LifeIndicator");
         updateLifeIndicator(currentLives);
     }
 
