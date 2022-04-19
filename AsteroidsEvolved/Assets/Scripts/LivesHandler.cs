@@ -1,20 +1,29 @@
+/*******************************************************************************************************************************************************************
+Program:Asteroids Evolved
+Authors: Derrick Grant, Justin Perkins, Kyle Shaw, Logan Larocque
+Date: April 17,2022
+Class: LivesHandler
+Purpose: handles all aspects of the player lives system
+Notes: Player starts with three lives. lives are removed uppon collision with asteroids. A vidual indicator is displayed on the screen which is also updated with the current amount of lives
+********************************************************************************************************************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Written by KS
 public class LivesHandler : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    private GameObject[] lifeIndicators;
-    public int currentLives = 3; // testing purposes only
+    public GameObject[] lifeIndicators;
+    public int currentLives = 3;
     public Color lifeDisabledColor = new Color(17.65f, 17.65f, 17.65f);
-    public GameObject GameOverGui;
+    public GameObject GameOverEvent;
 
     void Start()
     {
-        lifeIndicators = GameObject.FindGameObjectsWithTag("LifeIndicator");
         updateLifeIndicator(currentLives);
     }
 
@@ -53,9 +62,8 @@ public class LivesHandler : MonoBehaviour
     }
 
     public void GameOver() {
-        GameOverGui.SetActive(true);
-        GameOverGui.GetComponent<PauseGame>().SetPaused(true);
-        GameOverGui.GetComponent<GameOver>().setScore();
+        GameOverEvent.SetActive(true);
     }
     
 }
+// Written by KS

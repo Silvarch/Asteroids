@@ -1,23 +1,22 @@
+/*******************************************************************************************************************************************************************
+Program:Asteroids Evolved
+Authors: Derrick Grant, Justin Perkins, Kyle Shaw, Logan Larocque
+Date: April 17,2022
+Class: StartAScene
+Purpose: Allows for scene transfers
+Notes: 
+********************************************************************************************************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+// Written by KS
 public class StartAScene : MonoBehaviour
 {
 
     public string SceneName;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void startScene() {
         SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
@@ -25,3 +24,4 @@ public class StartAScene : MonoBehaviour
     }
 
 }
+// Written by KS
